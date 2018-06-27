@@ -9,8 +9,8 @@
 # production
 /build
 
-# Css stylesheets
-*.css
+# Built css stylesheets
+src/**/*.css
 
 # misc
 .DS_Store
