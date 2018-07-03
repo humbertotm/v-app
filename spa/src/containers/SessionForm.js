@@ -13,7 +13,7 @@ class SessionForm extends Component {
     return(
       <div className='session-form-container'>
         {
-          path == '/signup'
+          path === '/signup'
           ? <SignUpForm />
           : <LogInForm />
         }

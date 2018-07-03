@@ -4,7 +4,8 @@ import {
   Route
 } from 'react-router-dom';
 // Components
-import Home from './Home';
+import HomeReact from './HomeReact';
+import ScrollableGallery from './ScrollableGallery';
 import SessionForm from './SessionForm';
 
 
@@ -13,9 +14,10 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={ScrollableGallery} />
           <Route exact path='/signup' component={SessionForm} />
           <Route exact path='/login' component={SessionForm} />
+          <Route exact path='/home' component={HomeReact} />
         </div>
       </Router>
     );

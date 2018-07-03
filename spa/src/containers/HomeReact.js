@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
 // components
 import CounterButton from '../components/counterButton';
 // action creators
@@ -12,7 +11,7 @@ import {
 import logo from '../logo.svg';
 import './Home.css';
 
-class Home extends Component {
+class HomeReact extends Component {
   render() {
     const {
       count,
@@ -55,4 +54,4 @@ const mapDispatchToProps = dispatch => {
   });
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(HomeReact);
