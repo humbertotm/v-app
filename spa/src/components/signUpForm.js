@@ -2,13 +2,21 @@ import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 // Components
 import renderField from './renderField';
+// Form validations
+import signUpSyncValidate from '../utils/formValidations/signUpSyncValidate';
 
 class SignUpForm extends Component {
   render() {
-    const { error } = this.props
+    const {
+      handleSubmit, pristine,
+      reset, submitting, error,
+      currentFormIs, setFormPurpose,
+      submitValidate
+    } = this.props
 
     return(
-      <form className='sign-up-form'>
+      <form className='sign-up-form'
+            onSubmit={handleSubmit}>
         <Field
           name='email'
           type='email'
@@ -32,5 +40,6 @@ class SignUpForm extends Component {
 }
 
 export default reduxForm({
-  form: 'signup'
+  form: 'signup',
+  validate: signUpSyncValidate
 })(SignUpForm);
